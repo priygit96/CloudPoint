@@ -1,4 +1,4 @@
-body{
+/* body{ 
     background: antiquewhite;
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@ html{
 }
 .tempmin_max {
     text-align: center;
-    /* margin-top: 0.1rem; */
+    margin-top: 0.1rem;
     font-weight: 300;
     font-size: 1.2rem;
     color:green;
@@ -154,4 +154,4 @@ body > span {
     width: 100vw;
     text-align: center;
     color: grey;
-}
+} */
