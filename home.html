@@ -23,5 +23,58 @@
             <h3 class="tempmin_max">Min 35.30 °C | Max 44.20 °C</h3>
         </div>
     </div>
+    <script>
+        const curDate= document.getElementById("date");
+        let weathercon = document.getElementById("weathercon");
+        const tempStatus= "Clouds";
+        const getCurrentDay= () => {
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            let currentTime = new Date();
+            return weekday[currentTime.getDay()];
+        };
+        const getCurrentDate= () => {
+            var monthname = new Array(13);
+            monthname[1] = "Jan";
+            monthname[2] = "Feb";
+            monthname[3] = "Mar";
+            monthname[4] = "Apr";
+            monthname[5] = "May";
+            monthname[6] = "Jun";
+            monthname[7] = "Jul";
+            monthname[8] = "Aug";
+            monthname[9] = "Sep";
+            monthname[10] = "Oct";
+            monthname[11] = "Nov";
+            monthname[12] = "Dec";
+            var currentDate = new Date();
+            var month = monthname[currentDate.getMonth()+1];
+            var dte = currentDate.getDate();
+            let hours =  currentDate.getHours();
+            let mins = currentDate.getMinutes();
+            let indicator = "AM";
+            if(hours>12){
+                hours = hours-12;
+                indicator = "PM";
+            }
+            if(hours==12){
+                indicator= "PM";
+            }
+            if(hours==0){
+                hours==0;
+            }
+            if(mins<10){
+                mins = "0" + mins;
+            }
+            return month +  " " + dte+ "  ||  " + hours+ ":" +mins + " "+indicator;
+        };
+        curDate.innerHTML = getCurrentDay() + "  ||  " +getCurrentDate();
+    </script>
 </body>
 </html>
