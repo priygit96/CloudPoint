@@ -9,7 +9,11 @@
     <title>Weather web</title>
 </head>
 <body>
+    <div class="asd">
+    <input type="search" class="form-control box1"  name="srch" placeholder="Search any city..." required>
+
     <div class="box">
+	
         <div class="wave -one"></div>
         <div class="wave -two"></div>
         <div class="wave -three"></div>
@@ -23,15 +27,21 @@
             <h3 class="tempmin_max">Min {%tempmin%} | Max {%tempmax%}</h3>
         </div>
     </div>
+    </div>
     <style>
         body{
     background-color:whitesmoke;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
+}
+.asd{
+    position: relative;
+    left: 200px;
+    top: 20px;
 }
  html,body{
     font-size: 62.5%;
@@ -51,7 +61,13 @@ html{
     transform: translate3d(0, 0, 0);
     min-width: 20rem;
     min-height: 35rem;
-} 
+}
+.box1 {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  /* position: absolute; */
+}
 .wave {
     opacity: 0.3;
     position: absolute;
